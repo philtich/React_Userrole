@@ -14,8 +14,6 @@ export type Inputs = {
   newsletter: boolean
 }
 
-
-
 function App() {
   
   const [members, setMembers] = useState([
@@ -62,12 +60,12 @@ function App() {
     }
 
   return (
-    <section className='flex flex-col md:flex-row gap-8 md:gap-4 container h-screen justify-center items-center'>
+    <main className='flex flex-col md:flex-row gap-8 md:gap-4 container h-screen justify-center items-center'>
     <Form allMembers={members}
     setMembers = {(arr: Inputs[]) => setMembers(arr)}/>
     <MemberView allMembers={members}
     deleteById={(id: any) => deleteById(id)}/>                 
-    </section>
+    </main>
   )
 }
 
